@@ -1,0 +1,58 @@
+html,
+body {
+	font-style:      16px;
+	line-height:     27px;
+	font-weight:     400;
+	background:      #eeeeee;
+	padding:         0;
+	margin:          0;
+}
+.info-email {
+	font-weight:     600;
+	font-size:       14px;
+	line-height:     28px;
+	display:         flex;
+	img { padding-right: 10px }
+}
+.wrapper {
+	display:         flex;
+    flex-direction:  column;
+    height:          100%;
+}
+.container{
+  max-width:         1120px;
+  margin:            0 auto;
+}
+.app-container {
+	display:         flex;
+	align-items:     center;
+}
+
+
+.gray          { color: gray;    }
+.red           { color: red;     }
+.orang         { color: orange;  }
+.light-grin    { color: #B6E6BD; }
+.pink 	       { color: #FFBBCC; }
+.green         { color: green;   }
+.blue          { color: blue;    }
+.purple        { color: purple;  }
+
+.gray-bg       { background-color: gray;    }
+.red-bg        { background-color: red;     }
+.orang-bg      { background-color: orange;  }
+.light-grin-bg { background-color: #B6E6BD; }
+.pink-bg       { background-color: #FFBBCC; }
+.green-bg      { background-color: green;   }
+.blue-bg       { background-color: blue;    }
+.purple-bg     { background-color: purple;  }
+
+
+%borderColor { border:  2px solid black }
+
+@mixin colorBalls($color) {
+	height:           20px;
+	width:            20px;
+	border-radius:    50%;
+	background-color: $color;
+}

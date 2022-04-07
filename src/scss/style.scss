@@ -1,0 +1,372 @@
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.header {
+       background-color: rgb(38, 93, 194);
+       height: 50px;
+       padding-top: 5px;
+   &__container {
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+   }
+   &__logo {
+        width: 40px;
+   }
+   &__title {
+       display: block;
+       color: #fff;
+        font-weight: bold;
+        font-size: 26px;
+   }
+   &__btn {
+       padding: 5px 20px;
+       border-radius: 15px;
+       color: #fff;
+       background-color: rgb(38, 93, 194);
+       transition: 0.5s;
+       box-shadow: 0px 0px 10px #fff;
+       font-weight: bold;
+       margin-right: 10px;
+       &:hover{
+        transition: 1s;
+        color: #fff;
+        box-shadow: 0px 0px 10px #000;
+        background-color: rgb(24, 59, 124);
+       }
+   }
+   &__search {
+       background: url(../images/search.png) no-repeat 0 0/contain;
+       padding: 5px 10px 5px 30px;
+       color: #fff;
+       &::placeholder {
+        color: #fff;
+       }
+   }
+}
+.aside{
+    background-color: #fff;
+    width: 180px;
+    &__block {
+        &:first-child {
+            margin-top: 30px;
+        }
+    }
+    &__color {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    &__empty {
+        padding: 30px 0px 0 10px;
+        position: relative;
+    }
+    &__empty-btn {
+        background-color: transparent;
+        font-weight: 500;
+        padding-left: 10px;
+        color: #939393;
+        font-size: 15px;
+    }
+    &__empty-container {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &__item {
+        padding: 5px 0 5px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    &__name {
+        margin-left: 10px;
+        margin-right: 50px;
+        font-family:  Roboto;
+        font-weight: 500;
+    }
+    &__item-container {
+        display: flex;
+        align-items: center;
+    }
+    &__img {
+        margin-right: 20px;
+    }
+    &__all {
+        display: flex;
+        align-items: center;
+        margin: 50px 0px 20px 20px;
+    }
+    &__all-img {
+        width: 20px;
+        height: 20px;
+
+    }
+    &__all-text {
+        margin-left: 10px;
+    }
+    &__outline {
+        background-color: #fff;
+        box-shadow: 0 0 10px #000;
+        border-radius: 4px;
+    }
+}
+
+.folder-popup {
+    max-width: 220px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 0 1px #000;
+    position: absolute;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 2;
+    &__input {
+        margin-bottom: 10px;
+        width: 170px;
+        padding: 5px 10px;
+        border: 1px solid rgba(174, 174, 174, 0.3);
+        background-color: white;
+        border-radius: 6px;
+        &::placeholder {
+            color: rgba(174, 174, 174, 1);
+        }
+    }
+    &__colors {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__btn {
+        background-color: rgb(38, 93, 194);
+        color: #fff;
+        display: block;
+        width: 170px;
+        padding: 5px;
+        margin: 10px auto 0px;
+        border-radius: 2px;
+        transition: 0.5s;
+        font-weight: bold;
+        &:hover {
+            transition: 1s;
+            background-color: rgb(24, 59, 124);
+        }
+    }
+
+
+
+    &__gray {
+         @include colorBalls(gray);
+         &_active { @extend %borderColor; }
+    }
+    &__red {
+         @include colorBalls(red); 
+         &_active { @extend %borderColor; }
+    }
+    &__orang {
+     @include colorBalls(orange);
+         &_active { @extend %borderColor; }
+    }
+    &__pink {
+         @include colorBalls(#FFBBCC);
+         &_active { @extend %borderColor; }
+    }
+    &__light-grin {
+        @include colorBalls(#B6E6BD);
+        &_active { @extend %borderColor; }
+   }
+    &__green {
+         @include colorBalls(green); 
+         &_active { @extend %borderColor; }
+    }
+    &__blue {
+         @include colorBalls(blue); 
+         &_active { @extend %borderColor; }
+    }
+    &__purple {
+         @include colorBalls(purple); 
+         &_active { @extend %borderColor; }
+    }
+}
+.body__container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 10px;
+    min-height: 92vh
+}
+.content {
+    position: relative;
+    background-color: #fff;
+    padding: 50px;
+    &__title-input {
+        padding: 0px 5px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        font-family: Montserrat;
+        border-bottom: 2px dashed rgba(90, 90, 90, 0.1);
+        max-width: 360px;
+    }
+    &__task {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__task-checkbox {
+        display: none;
+    }
+    &__task-text {
+        padding-left: 35px;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            border:2px solid #e8e8e8;
+            box-shadow: 0 0 10px #eee;
+            border-radius: 50%;
+            left: 0;
+        }
+        &_active {
+        padding-left: 35px;
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                background-color: rgb(38, 93, 194);
+                box-shadow: 0 0  10px rgb(38, 93, 194);
+                border-radius: 50%;
+                left: 0;
+                top: 0;
+                background: url(../images/check-mark.png) no-repeat center/10px, rgb(38, 93, 194);
+            }
+        }
+    }
+    &__task-notworking-text {
+        text-decoration: line-through;
+        color: #777;
+        &::after {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-color: rgb(38, 93, 194);
+            box-shadow: 0 0  10px #F2F2F2;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            background: url(../images/check-mark-grey.png) no-repeat center/10px, #F2F2F2;
+        }
+        
+    }
+    &__task-create {
+        display: flex;
+        align-items: center;
+    }
+    &__task-btn {
+        background-color: transparent;
+        padding-left: 5px;
+        color: #979797; 
+        font-weight: bold;
+        font-size: 16px;
+    }
+    &__title-container {
+        display: flex;
+        align-items: center;
+    }
+    &__title-img {
+       height: 15px;
+       margin-left: 15px;
+       cursor: pointer;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        font-family: Montserrat;
+    }
+    &__empty {
+        position: absolute;
+        color: #ccc;
+        font-weight: 700;
+        font-family: Montserrat;
+        font-size: 46px;
+        display: flex;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
+    &__tasks {
+        margin-top: 30px;
+        padding-top: 50px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            margin: 0 auto;
+            height: 1px;
+            width: 100%;
+            background-color: #eee;
+        }
+    }
+    &__task-create {
+        margin-top: 10px;
+    }
+    &__form {
+        width: 400px;
+    }
+    &__crate-input {
+        border: 1px solid #eee;
+        width: 400px;
+        padding: 5px 10px;
+        height: 30px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        &::placeholder {
+            color: #C7C7C7;
+        }
+    }
+    &__crate-btn {
+        padding: 7px 20px;
+        background-color: rgb(38, 93, 194);
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 500;
+    }
+    &__crate-cancel {
+        margin-left: 12px;
+        padding: 7px 20px;
+        border-radius: 4px;
+        font-weight: 500;
+    }
+    &__task {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.menu-madia {
+    display: none;
+}
+@import 'media';
