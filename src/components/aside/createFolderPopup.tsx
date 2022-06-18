@@ -1,14 +1,10 @@
 import { FC, useState } from "react"
 import cn from "classnames"
 import { useForm } from "react-hook-form";
-import { useAppDispatch } from "../hooks/dispatch-selector.hook";
-import { addFolder } from "../redux/reducers/folder";
+import { useAppDispatch } from "../../hooks/dispatch-selector.hook";
+import { addFolder } from "../../redux/reducers/folder";
 
-type CreateFolderPopupType = {
-    setActivePopup: (value: boolean) => void
-}
-
-export const CreateFolderPopup: FC<CreateFolderPopupType>  = ({setActivePopup}) => {
+export const CreateFolderPopup: FC<CreateFolderPopupType>  = ({ setActivePopup }) => {
     const dispatch = useAppDispatch()
     const [activeItem, setActiceItem] = useState('gray') 
     const colorsArr: Array<string> = ['gray', 'red', 'orange', 'pink', 'light-grin', 'green', 'blue', 'purple']
@@ -34,4 +30,8 @@ export const CreateFolderPopup: FC<CreateFolderPopupType>  = ({setActivePopup}) 
                 setActivePopup(false)
             }, 0) } className="folder-popup__btn">Добавть</button>
     </form>
+}
+
+type CreateFolderPopupType = {
+    setActivePopup: (value: boolean) => void
 }

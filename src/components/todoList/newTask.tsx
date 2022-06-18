@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useAppDispatch } from "../hooks/dispatch-selector.hook";
-import { addTask } from "../redux/reducers/task";
-import plus from '../images/plus.png'
+import { useAppDispatch } from "../../hooks/dispatch-selector.hook";
+import { addTask } from "../../redux/reducers/task";
+import plus from '../../images/plus.png'
 
 
 export type newTaskType = any
@@ -13,6 +13,7 @@ export const NewTask: FC<newTaskType> = ({index}) => {
 
   const onSubmit = (data: any) => {
     dispatch(addTask({text: data.text, folderIndex: index}))
+    
     setOpenForm(false)
   }
 
