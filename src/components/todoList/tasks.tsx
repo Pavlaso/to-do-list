@@ -1,13 +1,14 @@
 import { FC } from 'react'
-import { useAppSelector } from '../../hooks/dispatch-selector.hook'
+import { useAppSelector } from '../../assets/hooks/dispatch-selector.hook'
 import { taskObjectType } from '../../redux/reducers/task'
+import { getTaskArray } from '../../redux/selectors/getTaskArray'
 
 import { NewTask } from "./newTask"
 import { TaskContent } from './taskContent'
 
 export const Tasks: FC<TasksType> = ({index, setId}) => {
 
-    const taskArray = useAppSelector((store) => store.task.taskArray)
+    const taskArray = useAppSelector(getTaskArray)
 
     return <div className="content__tasks">
         {

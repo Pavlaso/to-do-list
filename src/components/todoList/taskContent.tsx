@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { FC } from 'react'
-import { useAppDispatch } from '../../hooks/dispatch-selector.hook'
+import { useAppDispatch } from '../../assets/hooks/dispatch-selector.hook'
 
 import cross from '../../images/cross.svg'
 import { deleteTask, markTask, taskObjectType } from '../../redux/reducers/task'

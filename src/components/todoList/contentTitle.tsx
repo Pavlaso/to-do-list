@@ -1,12 +1,13 @@
 import { ChangeEvent, FC } from "react"
-import { useAppSelector } from "../../hooks/dispatch-selector.hook"
+import { useAppSelector } from "../../assets/hooks/dispatch-selector.hook"
 import change from '../../images/change.png'
+import { getFolderArray } from "../../redux/selectors/getFolderArray"
 import { ContentTitleForm } from "./contentTitleForm"
 
 
 export const ContentTitle: FC<ContentTitleType> = ({index, activePopup,setActivePopup, handleSubmit, handleNameChange}) => {
 
-    const folderArray = useAppSelector((store) => store.folder.folderArray)
+    const folderArray = useAppSelector(getFolderArray)
 
     const titleColor = `${folderArray[index].color} content__title`
 

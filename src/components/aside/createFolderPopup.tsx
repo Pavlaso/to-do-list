@@ -1,7 +1,7 @@
 import { FC, useState } from "react"
 import cn from "classnames"
 import { useForm } from "react-hook-form";
-import { useAppDispatch } from "../../hooks/dispatch-selector.hook";
+import { useAppDispatch } from "../../assets/hooks/dispatch-selector.hook";
 import { addFolder } from "../../redux/reducers/folder";
 
 export const CreateFolderPopup: FC<CreateFolderPopupType>  = ({ setActivePopup }) => {

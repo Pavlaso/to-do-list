@@ -2,7 +2,7 @@ import menu_media from '../../images/menu-media.png'
 
 import cn from "classnames"
 
-import { useAppDispatch } from '../../hooks/dispatch-selector.hook'
+import { useAppDispatch } from '../../assets/hooks/dispatch-selector.hook'
 import { changeNameFolder } from '../../redux/reducers/folder'
 import { stopWorking  } from '../../redux/reducers/task'
 import { ChangeEvent, FC, useEffect, useState } from 'react'
