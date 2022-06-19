@@ -5,13 +5,13 @@ export const Header = () => {
     <div className="container">
       <div className="header__container">
         <div className="app-container">
-          <img className="header__logo" src={logo} alt="logo" />
+          <img data-testid="header-img" className="header__logo" src={logo} alt="logo" />
           <h2 className="header__title">To-Do List</h2>
         </div>  
-      {/*
-        <input type="text" className="header__search" placeholder='Search task' />
-        <button className="header__btn">Log In</button>
-      */}
+        {/*
+          <input type="text" className="header__search" placeholder='Search task' />
+          <button className="header__btn">Log In</button>
+        */}
       </div>
     </div>
   </div>

@@ -9,13 +9,13 @@ export const Folders: FC<FoldersType> = ({setIndex, folderArray}) => {
        {
         folderArray[0] 
         ? folderArray.map((item: folderObjectType, index) => (
-            <Folder 
-              setIndex={setIndex} 
-              folderArray={folderArray} 
-              index={index} 
-              item={item} 
-            />
-          )
+          <Folder 
+            setIndex={setIndex} 
+            folderArray={folderArray} 
+            index={index} 
+            item={item} 
+          />
+        )
         )
         : <AddFolder />
       }
