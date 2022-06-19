@@ -1,4 +1,4 @@
-import menu_media from '../../images/menu-media.png'
+import menu_media from '../../assets/images/menu-media.png'
 
 import cn from "classnames"
 

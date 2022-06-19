@@ -1,4 +1,4 @@
-import menu from '../../images/menu.png'
+import menu from '../../assets/images/menu.png'
 
 export const ButtonAll = () => {
     return (

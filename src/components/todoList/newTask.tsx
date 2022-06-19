@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useAppDispatch } from "../../assets/hooks/dispatch-selector.hook";
 import { addTask } from "../../redux/reducers/task";
-import plus from '../../images/plus.png'
+import plus from '../../assets/images/plus.png'
 
 
 

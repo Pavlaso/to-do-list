@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, FormEvent } from "react"
 import { useAppSelector } from "../../assets/hooks/dispatch-selector.hook"
-import change from '../../images/change.png'
+import change from '../../assets/images/change.png'
 import { getFolderArray } from "../../redux/selectors/getFolderArray"
 import { ContentTitleForm } from "./contentTitleForm"
 

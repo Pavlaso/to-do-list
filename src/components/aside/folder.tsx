@@ -1,6 +1,6 @@
 import cn from "classnames"
 
-import cross from '../../images/cross.svg'
+import cross from '../../assets/images/cross.svg'
 
 import { useAppDispatch } from '../../assets/hooks/dispatch-selector.hook';
 import { deleteFolder, folderObjectType, setActiveFolder } from '../../redux/reducers/folder';

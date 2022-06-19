@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import { FC } from 'react'
 import { useAppDispatch } from '../../assets/hooks/dispatch-selector.hook'
 
-import cross from '../../images/cross.svg'
+import cross from '../../assets/images/cross.svg'
 import { deleteTask, markTask, taskObjectType } from '../../redux/reducers/task'
 
 

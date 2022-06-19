@@ -1,4 +1,4 @@
-import logo from '../../images/logo.png'
+import logo from '../../assets/images/logo.png'
 
 export const Header = () => {
     return <div className="header">

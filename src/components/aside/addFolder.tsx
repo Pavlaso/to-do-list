@@ -2,7 +2,7 @@ import { useState } from "react"
 import { CreateFolderPopup } from "./createFolderPopup"
 
 
-import plus2 from "../../images/plus2.png"
+import plus2 from "../../assets/images/plus2.png"
 
 export const AddFolder = () => {
     const [activePopup, setActivePopup] = useState(false)

@@ -38,7 +38,7 @@
        }
    }
    &__search {
-       background: url(../images/search.png) no-repeat 0 0/contain;
+       background: url(../assets/images/search.png) no-repeat 0 0/contain;
        padding: 5px 10px 5px 30px;
        color: #fff;
        &::placeholder {
@@ -255,7 +255,7 @@
                 border-radius: 50%;
                 left: 0;
                 top: 0;
-                background: url(../images/check-mark.png) no-repeat center/10px, rgb(38, 93, 194);
+                background: url(../assets/images/check-mark.png) no-repeat center/10px, rgb(38, 93, 194);
             }
         }
     }
@@ -272,7 +272,7 @@
             border-radius: 50%;
             left: 0;
             top: 0;
-            background: url(../images/check-mark-grey.png) no-repeat center/10px, #F2F2F2;
+            background: url(../assets/images/check-mark-grey.png) no-repeat center/10px, #F2F2F2;
         }
         
     }

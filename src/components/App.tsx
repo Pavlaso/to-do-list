@@ -1,5 +1,5 @@
-import { TodoList } from './components/todoList/todoList'
-import { Header } from './components/header/header'
+import { TodoList } from './todoList/todoList'
+import { Header } from './header/header'
 
 export const App = () => {
   return <div className="wrapper">
