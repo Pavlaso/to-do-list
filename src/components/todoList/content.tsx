@@ -5,7 +5,7 @@ import cn from "classnames"
 import { useAppDispatch } from '../../assets/hooks/dispatch-selector.hook'
 import { changeNameFolder } from '../../redux/reducers/folder'
 import { stopWorking  } from '../../redux/reducers/task'
-import { ChangeEvent, FC, useEffect, useState } from 'react'
+import { ChangeEvent, FC, FormEvent, useEffect, useState } from 'react'
 import { AsideContainer } from '../aside/asideContainer'
 import { ContentTitle } from './contentTitle'
 import { Tasks } from './tasks'
@@ -16,13 +16,13 @@ export const Content: FC<ContentType> = ({ index, setIndex }) => {
     const [activePopup, setActivePopup] = useState(false)
     const [inputState, setInputState] = useState('')
     const [activeAside, setActiveAside] = useState(false)
-    const [id, setId] = useState<any>(null)
+    const [id, setId] = useState<number | null>(null)
 
     const contentStyle = cn('content', {['menu-madia__content']: activeAside})
 
     const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => setInputState( e.target.value ) 
 
-    const handleSubmit = (e: any)  =>  {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>)  =>  {
         dispatch(changeNameFolder({index, name: inputState})) 
         e.preventDefault();
         setActivePopup(false)

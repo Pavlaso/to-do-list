@@ -4,13 +4,13 @@ import { Content } from './content'
 
 export const TodoList = () => {
 
-    const [index, setIndex] = useState<any>(null)
+    const [index, setIndex] = useState<number | null>(null)
 
     return <div className="body">
     <div className="container">
       <div className="body__container">
         <Aside setIndex={setIndex} />
-        <Content index={index} setIndex={setIndex}/>
+        <Content index={index as number} setIndex={setIndex}/>
       </div>
     </div>
   </div>

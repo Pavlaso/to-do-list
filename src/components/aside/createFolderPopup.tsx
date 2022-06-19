@@ -1,8 +1,8 @@
 import { FC, useState } from "react"
 import cn from "classnames"
-import { useForm } from "react-hook-form";
-import { useAppDispatch } from "../../assets/hooks/dispatch-selector.hook";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { addFolder } from "../../redux/reducers/folder";
+import { useAppDispatch } from "../../assets/hooks/dispatch-selector.hook";
 
 export const CreateFolderPopup: FC<CreateFolderPopupType>  = ({ setActivePopup }) => {
     const dispatch = useAppDispatch()
@@ -10,7 +10,7 @@ export const CreateFolderPopup: FC<CreateFolderPopupType>  = ({ setActivePopup }
     const colorsArr: Array<string> = ['gray', 'red', 'orange', 'pink', 'light-grin', 'green', 'blue', 'purple']
 
     const { register, handleSubmit } = useForm();
-    const onSubmit = (data: any) => dispatch(addFolder({...data, color: activeItem}));
+    const onSubmit = (data: dataType) => dispatch(addFolder({...data, color: activeItem}));
     
     return <form className="folder-popup" onSubmit={handleSubmit(onSubmit)}>
             <input 
@@ -34,4 +34,10 @@ export const CreateFolderPopup: FC<CreateFolderPopupType>  = ({ setActivePopup }
 
 type CreateFolderPopupType = {
     setActivePopup: (value: boolean) => void
+}
+
+type dataType = {
+    name: string
+    color: string
+    active: boolean
 }

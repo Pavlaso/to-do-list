@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from "react"
+import { ChangeEvent, FC, FormEvent } from "react"
 import { folderObjectType } from "../../redux/reducers/folder"
 
 export const ContentTitleForm: FC<ContentTitleFormType> = ({index, handleSubmit, folderArray, handleNameChange}) => {
@@ -11,7 +11,7 @@ export const ContentTitleForm: FC<ContentTitleFormType> = ({index, handleSubmit,
 }
 type ContentTitleFormType = {
     index: number
-    handleSubmit: (e: any) => void 
+    handleSubmit: (e: FormEvent<HTMLFormElement>) => void 
     handleNameChange: (e: ChangeEvent<HTMLInputElement>) => void 
     folderArray: folderObjectType[]
 }

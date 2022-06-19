@@ -6,7 +6,6 @@ import { createReduxStore, RootState } from "../../redux/store"
 export const renderWithRedux = (component: FC, ititialState: RootState) => {
     const store = createReduxStore(ititialState)
     return render(
-        //@ts-ignore
         <Provider store={store}>
             {component}
         </Provider>

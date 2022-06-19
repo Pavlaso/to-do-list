@@ -5,13 +5,13 @@ import { addTask } from "../../redux/reducers/task";
 import plus from '../../images/plus.png'
 
 
-export type newTaskType = any
+
 export const NewTask: FC<newTaskType> = ({index}) => {
   const dispatch = useAppDispatch()
   const [openForm, setOpenForm] = useState(false)
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: dataType) => {
     dispatch(addTask({text: data.text, folderIndex: index}))
     
     setOpenForm(false)
@@ -30,4 +30,12 @@ export const NewTask: FC<newTaskType> = ({index}) => {
       </form>
     }
   </div>
+}
+
+type dataType = {
+  text: string
+  folderIndex: number
+}
+export type newTaskType = {
+  index: number
 }

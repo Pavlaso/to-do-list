@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from "react"
+import { ChangeEvent, FC, FormEvent } from "react"
 import { useAppSelector } from "../../assets/hooks/dispatch-selector.hook"
 import change from '../../images/change.png'
 import { getFolderArray } from "../../redux/selectors/getFolderArray"
@@ -32,6 +32,6 @@ type ContentTitleType = {
     index: number
     activePopup: boolean
     setActivePopup: (val: boolean) => void 
-    handleSubmit: (e: any) => void 
+    handleSubmit: (e: FormEvent<HTMLFormElement>) => void 
     handleNameChange: (e: ChangeEvent<HTMLInputElement>) => void 
 }
