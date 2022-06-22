@@ -10,7 +10,7 @@ import { deleteTask, markTask, taskObjectType } from '../../redux/reducers/task'
 export const TaskContent: FC<TaskContentType> = ({setId, item, num, taskArray}) => {
     const dispatch = useAppDispatch()
 
-    const deleteTaskFunc =(index: number ) => dispatch(deleteTask(index))
+    const deleteTaskFunc = (index: number ) => dispatch(deleteTask(index))
 
     const setActiveTask = (index: number) => {
         dispatch(markTask(index))

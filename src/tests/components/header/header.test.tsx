@@ -1,5 +1,5 @@
-import { screen, render, getByTestId } from "@testing-library/react";
-import { Header } from "../components/header/header";
+import { screen, render } from "@testing-library/react";
+import { Header } from "../../../components/header/header";
 
 
 describe('Header', () => {
